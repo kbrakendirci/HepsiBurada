@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.kotlinproject.hepsiburada.R
@@ -24,15 +25,17 @@ class AnasayfaFragment : Fragment() {
         // Inflate the layout for this fragment
 
         tasarim=inflater.inflate(R.layout.fragment_anasayfa, container, false)
+        val img :CardView=tasarim.findViewById(R.id.imageView4)
+        //img.setBackgroundResource(R.drawable.onboard);
         dataSet=ArrayList<CategoryData>()
         dataSet.add(CategoryData("Market","alisverissepeti"))
-        dataSet.add(CategoryData("Kazandıran Çekiliş","sanstopu"))
+        dataSet.add(CategoryData("Çekiliş","sanstopu"))
         dataSet.add(CategoryData("Uçak Bileti","ucak"))
-        dataSet.add(CategoryData("Dondurma","ice_cream"))
         dataSet.add(CategoryData("Su","water"))
         dataSet.add(CategoryData("Anne Çocuk","korel"))
-        dataSet.add(CategoryData("Su","water"))
-        dataSet.add(CategoryData("Anne Çocuk","korel"))
+        dataSet.add(CategoryData("Teknoloji Dünyasi","teknolojitutkulari"))
+        dataSet.add(CategoryData("Moda Dünyası","modadunyasi"))
+        dataSet.add(CategoryData("KitapSeverler","kitapseverler"))
 
         val rv:RecyclerView=tasarim.findViewById(R.id.categoryRecycleView)
         rv.layoutManager= StaggeredGridLayoutManager(4,StaggeredGridLayoutManager.VERTICAL)

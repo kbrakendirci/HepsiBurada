@@ -1,5 +1,6 @@
 package com.kotlinproject.hepsiburada.adapters
 import android.content.Context
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,11 +24,7 @@ class CategoryCardAdapter (var dataSet:List<CategoryData>, var mContext: Context
             categoryCard=view.findViewById(R.id.categoryCard)
             categoryImageView=view.findViewById(R.id.categoryImageView)
             categoryNameTextView=view.findViewById(R.id.categoryNameTextView)
-
-
         }
-
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryCardViewHolder {
@@ -40,7 +37,7 @@ class CategoryCardAdapter (var dataSet:List<CategoryData>, var mContext: Context
 
         holder.categoryNameTextView.text=category.categoryname
         holder.categoryImageView.setImageResource(mContext.resources.getIdentifier(category.categryImage,"drawable",mContext.packageName))
-
+        holder.categoryImageView.setBackgroundColor(Color.parseColor("#f5ded8"))
 
     }
 
