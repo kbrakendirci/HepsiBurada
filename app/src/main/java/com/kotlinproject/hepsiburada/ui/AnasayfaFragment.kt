@@ -10,8 +10,12 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.kotlinproject.hepsiburada.R
 import com.kotlinproject.hepsiburada.adapters.CategoryCardAdapter
+import com.kotlinproject.hepsiburada.adapters.IntroductionCardAdapter
+import com.kotlinproject.hepsiburada.adapters.IntroductionCardAdapter2
 import com.kotlinproject.hepsiburada.adapters.PromotionAdapter
 import com.kotlinproject.hepsiburada.data.CategoryData
+import com.kotlinproject.hepsiburada.data.IntroductionData
+import com.kotlinproject.hepsiburada.data.IntroductionData2
 import com.kotlinproject.hepsiburada.data.PromotionData
 
 
@@ -20,6 +24,8 @@ class AnasayfaFragment : Fragment() {
     private lateinit var tasarim:View
     private lateinit var dataSet:ArrayList<CategoryData>
     private lateinit var promotionDataSet:ArrayList<PromotionData>
+    private lateinit var introductionDataSet:ArrayList<IntroductionData>
+    private lateinit var introductionDataSet2:ArrayList<IntroductionData2>
     private lateinit var layoutmanager: RecyclerView.LayoutManager
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -48,10 +54,29 @@ class AnasayfaFragment : Fragment() {
         promotionDataSet.add(PromotionData("Sana Özel","diamond","Fırsatlar seni bekliyor"))
         promotionDataSet.add(PromotionData("4x4","percentage","8 kampanya var"))
 
-
         val rvpromotion:RecyclerView=tasarim.findViewById(R.id.onBoardRecyclerView)
         rvpromotion.layoutManager= StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
         rvpromotion.adapter= PromotionAdapter(promotionDataSet,requireContext())
+
+
+        introductionDataSet=ArrayList<IntroductionData>()
+        introductionDataSet.add(IntroductionData("Konum","location","Lütfen Konum Seçin"))
+
+
+        val rvintroduction:RecyclerView=tasarim.findViewById(R.id.introductionRecycleView)
+        rvintroduction.layoutManager= StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.VERTICAL)
+        rvintroduction.adapter= IntroductionCardAdapter(introductionDataSet,requireContext())
+
+
+
+        introductionDataSet2=ArrayList<IntroductionData2>()
+        introductionDataSet2.add(IntroductionData2("hepsipayedit"))
+
+
+
+        val rvintroduction2:RecyclerView=tasarim.findViewById(R.id.introductionRecycleView2)
+        rvintroduction2.layoutManager= StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.VERTICAL)
+        rvintroduction2.adapter= IntroductionCardAdapter2(introductionDataSet2,requireContext())
 
 
 

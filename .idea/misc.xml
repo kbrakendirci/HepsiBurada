@@ -13,6 +13,9 @@
         <entry key="app/src/main/res/layout/fragment_hepsi_express.xml" value="0.45" />
         <entry key="app/src/main/res/layout/fragment_listelerim.xml" value="0.32447916666666665" />
         <entry key="app/src/main/res/layout/fragment_sepetim.xml" value="0.32447916666666665" />
+        <entry key="app/src/main/res/layout/hepsipaycardadapter.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/introduction.xml" value="0.32447916666666665" />
+        <entry key="app/src/main/res/layout/introductioncardview.xml" value="0.28888888888888886" />
         <entry key="app/src/main/res/layout/serachview.xml" value="0.17708333333333334" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.24722222222222223" />
       </map>
