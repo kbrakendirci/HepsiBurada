@@ -26,7 +26,8 @@
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+       >
 
 
         <ImageView
@@ -58,33 +59,99 @@
             app:srcCompat="@drawable/e" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/background"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3"
+        android:elevation="20dp">
+
+
+        <ImageView
+            android:padding="10dp"
+            android:id="@+id/imageView7"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/loupe"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:padding="10dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_margin="2dp"
+            android:src="@drawable/camera"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/textView"
+
+            android:layout_width="308dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="4dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/imageView9"
+            app:layout_constraintEnd_toStartOf="@+id/imageView8"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView7"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="400dp"
+            android:layout_height="10dp"
+            android:src="@drawable/cizgi"
+            android:layout_marginTop="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="100dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/categoryRecycleView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/onBoardRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/onBoardRecyclerView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
+        app:layout_constraintTop_toBottomOf="@+id/categoryRecycleView" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/imageView4"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        app:cardCornerRadius="15dp"
-        android:elevation="15dp"
         android:layout_margin="3dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/categoryRecycleView" >
+        android:elevation="15dp"
+        app:cardCornerRadius="15dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintTop_toBottomOf="@+id/onBoardRecyclerView"
+        tools:layout_editor_absoluteX="3dp">
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/onboard"></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/onboard"></LinearLayout>
 
 
     </androidx.cardview.widget.CardView>
